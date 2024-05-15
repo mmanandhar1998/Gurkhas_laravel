@@ -2,7 +2,10 @@
     <x-authentication-card>
         <x-slot name="logo">
             <!-- <x-authentication-card-logo /> -->
-            <h3><a href="/">Gurkhas Eatery and Garden</a></h3>
+            <a href="/" class="logo-link">
+                <img src="{{ asset('assets/img/LOGO.jpg') }}" alt="Gurkhas Eatery and Garden Logo"
+                    style="width: 450px; height: auto;">
+            </a>
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -12,8 +15,8 @@
 
             <div>
                 <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required
-                    autofocus autocomplete="name" />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
+                    required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
